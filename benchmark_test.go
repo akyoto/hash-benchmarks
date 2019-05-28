@@ -3,6 +3,7 @@ package benchmark_test
 import (
 	"bytes"
 	"hash/crc32"
+	"hash/fnv"
 	"testing"
 
 	"github.com/OneOfOne/xxhash"
@@ -46,7 +47,6 @@ func BenchmarkXXHash_4B(b *testing.B) {
 		h := xxhash.New64()
 
 		for pb.Next() {
-			h.Reset()
 			_, _ = h.Write(data4B)
 			h.Sum64()
 		}
@@ -60,6 +60,20 @@ func BenchmarkSipHash_4B(b *testing.B) {
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
 			siphash.Hash(13, 10, data4B)
+		}
+	})
+}
+
+func BenchmarkFNV_4B(b *testing.B) {
+	b.ReportAllocs()
+	b.ResetTimer()
+
+	b.RunParallel(func(pb *testing.PB) {
+		h := fnv.New64()
+
+		for pb.Next() {
+			_, _ = h.Write(data4B)
+			h.Sum64()
 		}
 	})
 }
@@ -94,7 +108,6 @@ func BenchmarkXXHash_8B(b *testing.B) {
 		h := xxhash.New64()
 
 		for pb.Next() {
-			h.Reset()
 			_, _ = h.Write(data8B)
 			h.Sum64()
 		}
@@ -108,6 +121,20 @@ func BenchmarkSipHash_8B(b *testing.B) {
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
 			siphash.Hash(13, 10, data8B)
+		}
+	})
+}
+
+func BenchmarkFNV_8B(b *testing.B) {
+	b.ReportAllocs()
+	b.ResetTimer()
+
+	b.RunParallel(func(pb *testing.PB) {
+		h := fnv.New64()
+
+		for pb.Next() {
+			_, _ = h.Write(data8B)
+			h.Sum64()
 		}
 	})
 }
@@ -142,7 +169,6 @@ func BenchmarkXXHash_10KB(b *testing.B) {
 		h := xxhash.New64()
 
 		for pb.Next() {
-			h.Reset()
 			_, _ = h.Write(data10KB)
 			h.Sum64()
 		}
@@ -156,6 +182,20 @@ func BenchmarkSipHash_10KB(b *testing.B) {
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
 			siphash.Hash(13, 10, data10KB)
+		}
+	})
+}
+
+func BenchmarkFNV_10KB(b *testing.B) {
+	b.ReportAllocs()
+	b.ResetTimer()
+
+	b.RunParallel(func(pb *testing.PB) {
+		h := fnv.New64()
+
+		for pb.Next() {
+			_, _ = h.Write(data10KB)
+			h.Sum64()
 		}
 	})
 }
