@@ -1,0 +1,13 @@
+github.com/OneOfOne/xxhash v1.2.5 h1:zl/OfRA6nftbBK9qTohYBJ5xvw6C/oNKizR7cZGl3cI=
+github.com/OneOfOne/xxhash v1.2.5/go.mod h1:eZbhyaAYD41SGSSsnmcpxVoRiQ/MPUTjUdIIOT9Um7Q=
+github.com/akyoto/hash v0.3.3 h1:zOQ71sRCRU56beF148dWUaCmWWpuLmi3dBd1Jiy8vHE=
+github.com/akyoto/hash v0.3.3/go.mod h1:uPmnZyhBJIyLON8V9LNi0CcqtwYaH2RiKLFQg67fwq0=
+github.com/akyoto/stringutils v0.2.1 h1:4St8vcRnNFuCNSMEJ34TeLb7/FfsvZaSU8/Scr6Zymg=
+github.com/akyoto/stringutils v0.2.1/go.mod h1:BUYzDYA2CZ7bqDZKpAQMUJOG9mCCOw4qd4JM3770bI8=
+github.com/dchest/siphash v1.2.1 h1:4cLinnzVJDKxTCl9B01807Yiy+W7ZzVHj/KIroQRvT4=
+github.com/dchest/siphash v1.2.1/go.mod h1:q+IRvb2gOSrUnYoPqHiyHXS0FOBBOdl6tONBlVnOnt4=
+github.com/frankban/quicktest v1.4.0/go.mod h1:36zfPVQyHxymz4cH7wlDmVwDrJuljRB60qkgn7rorfQ=
+github.com/google/go-cmp v0.3.0/go.mod h1:8QqcDgzrUqlUb/G2PQTWiueGozuR1884gddMywk6iLU=
+github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
+github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
+github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
